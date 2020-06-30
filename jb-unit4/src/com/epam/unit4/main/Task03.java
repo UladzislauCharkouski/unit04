@@ -8,27 +8,27 @@ public class Task03 {
 	final static String rub = "rub";
 	final static String byn = "byn";
 	public static void main(String[] args) {
-		System.out.println("Здраствуйте вас приветствует терминал обмена валют");
-		System.out.println("Крусы валют по курсу НБРБ на 05.03.2020:\n" + "USD=1\n" + "EUR=0.8961\n" + "RUB=65.9854\n" + "BYN=2.2311");
-		System.out.println("Какую валюту вы бы хотели обменять?\n" + "Введите usd, eur, rub или byn");
+		System.out.println("Г‡Г¤Г°Г Г±ГІГўГіГ©ГІГҐ ГўГ Г± ГЇГ°ГЁГўГҐГІГ±ГІГўГіГҐГІ ГІГҐГ°Г¬ГЁГ­Г Г« Г®ГЎГ¬ГҐГ­Г  ГўГ Г«ГѕГІ");
+		System.out.println("ГЉГ°ГіГ±Г» ГўГ Г«ГѕГІ ГЇГ® ГЄГіГ°Г±Гі ГЌГЃГђГЃ Г­Г  05.03.2020:\n" + "USD=1\n" + "EUR=0.8961\n" + "RUB=65.9854\n" + "BYN=2.2311");
+		System.out.println("ГЉГ ГЄГіГѕ ГўГ Г«ГѕГІГі ГўГ» ГЎГ» ГµГ®ГІГҐГ«ГЁ Г®ГЎГ¬ГҐГ­ГїГІГј?\n" + "Г‚ГўГҐГ¤ГЁГІГҐ usd, eur, rub ГЁГ«ГЁ byn");
 		System.out.println(">");
-		String sc1 = readCurrencyFromConsole(); //какую валюту поменять
-		System.out.println("Введите сумму");
+		String sc1 = readCurrencyFromConsole(); //ГЄГ ГЄГіГѕ ГўГ Г«ГѕГІГі ГЇГ®Г¬ГҐГ­ГїГІГј
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ Г±ГіГ¬Г¬Гі");
 		System.out.println(">");
-		int sc2 = readQuantityFromConsole(); //сумма денег
-		System.out.println("На какую валюту вы бы хотели обменять ваши  \"  " + sc2 + " - " + sc1 + "  \" ?");
-		System.out.println("Введите usd, eur, rub или byn");
+		int sc2 = readQuantityFromConsole(); //Г±ГіГ¬Г¬Г  Г¤ГҐГ­ГҐГЈ
+		System.out.println("ГЌГ  ГЄГ ГЄГіГѕ ГўГ Г«ГѕГІГі ГўГ» ГЎГ» ГµГ®ГІГҐГ«ГЁ Г®ГЎГ¬ГҐГ­ГїГІГј ГўГ ГёГЁ  \"  " + sc2 + " - " + sc1 + "  \" ?");
+		System.out.println("Г‚ГўГҐГ¤ГЁГІГҐ usd, eur, rub ГЁГ«ГЁ byn");
 		System.out.println(">");
-		String sc3 = readCurrencyFromConsole(); //какую валюту выдать
+		String sc3 = readCurrencyFromConsole(); //ГЄГ ГЄГіГѕ ГўГ Г«ГѕГІГі ГўГ»Г¤Г ГІГј
 		convertation(sc1, sc2, sc3);
-		System.out.println("Пересчитывайте деньги не отходя от терминала и приходите к нам ещё!");
+		System.out.println("ГЏГҐГ°ГҐГ±Г·ГЁГІГ»ГўГ Г©ГІГҐ Г¤ГҐГ­ГјГЈГЁ Г­ГҐ Г®ГІГµГ®Г¤Гї Г®ГІ ГІГҐГ°Г¬ГЁГ­Г Г«Г  ГЁ ГЇГ°ГЁГµГ®Г¤ГЁГІГҐ ГЄ Г­Г Г¬ ГҐГ№Вё!");
 	}
 
 public static String readCurrencyFromConsole() {
     Scanner sc = new Scanner(System.in);
     while (sc.hasNext(usd) == false && sc.hasNext(eur) == false && sc.hasNext(rub) == false && sc.hasNext(byn) == false) {
 		String x = sc.next();
-		System.out.println("Вы неверно ввели валюту, попробуйте ещё раз");
+		System.out.println("Г‚Г» Г­ГҐГўГҐГ°Г­Г® ГўГўГҐГ«ГЁ ГўГ Г«ГѕГІГі, ГЇГ®ГЇГ°Г®ГЎГіГ©ГІГҐ ГҐГ№Вё Г°Г Г§");
 		System.out.println(">");
 	}
     String x = sc.next();
@@ -39,7 +39,7 @@ public static int readQuantityFromConsole() {
     Scanner sc = new Scanner(System.in);
     while (sc.hasNextInt() == false) {
 		String x = sc.next();
-		System.out.println("Вы неверно ввели сумму, попробуйте ещё раз");
+		System.out.println("Г‚Г» Г­ГҐГўГҐГ°Г­Г® ГўГўГҐГ«ГЁ Г±ГіГ¬Г¬Гі, ГЇГ®ГЇГ°Г®ГЎГіГ©ГІГҐ ГҐГ№Вё Г°Г Г§");
 		System.out.println(">");
 	}
     int x = sc.nextInt();
@@ -51,60 +51,61 @@ public static String convertation(String sc1, int sc2, String sc3) {
 	case "usd":
 		if (sc3.contentEquals(eur)) {
 			double coef = 0.8961;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "EUR");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "EUR");
 		}
 		if (sc3.contentEquals(rub)) {
 			double coef = 65.9854;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "RUB");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "RUB");
 		}
 		if (sc3.contentEquals(byn)) {
 			double coef = 2.2311;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "BYN");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "BYN");
 		}
 		break;
 	case "eur":
 		if (sc3.contentEquals(usd)) {
 			double coef = 1.116;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "USD");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "USD");
 		}
 		if (sc3.contentEquals(rub)) {
 			double coef = 73.6366;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "RUB");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "RUB");
 		}
 		if (sc3.contentEquals(byn)) {
 			double coef = 2.4898;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "BYN");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "BYN");
 		}
 		break;
 	case "rub":
 		if (sc3.contentEquals(usd)) {
 			double coef = 0.0152;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "USD");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "USD");
 		}
 		if (sc3.contentEquals(eur)) {
 			double coef = 0.0136;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "EUR");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "EUR");
 		}
 		if (sc3.contentEquals(byn)) {
 			double coef = 0.0338;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "BYN");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "BYN");
 		}
 		break;
 	case "byn":
 		if (sc3.contentEquals(usd)) {
 			double coef = 0.4482;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "USD");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "USD");
 		}
 		if (sc3.contentEquals(eur)) {
 			double coef = 0.4016;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "EUR");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "EUR");
 		}
 		if (sc3.contentEquals(rub)) {
 			double coef = 29.5753;
-			System.out.println("Сумма к выдаче:  " + sc2 * coef + "  " + "RUB");
+			System.out.println("Г‘ГіГ¬Г¬Г  ГЄ ГўГ»Г¤Г Г·ГҐ:  " + sc2 * coef + "  " + "RUB");
 		}
 		break;
 	}
 	return sc1;
 }
 }
+// Р·Р°РґР°РЅРёСЏ РјРѕРґСѓР»СЏ 4 Р·Р°С‡С‚РµРЅС‹, СЃРµСЂСЊРµР·РЅС‹С… Р·Р°РјРµС‡Р°РЅРёР№ РЅРµС‚
